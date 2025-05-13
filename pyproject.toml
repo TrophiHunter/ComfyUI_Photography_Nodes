@@ -1,0 +1,15 @@
+[project]
+name = "Photography-Nodes"
+description = "Photography nodes with laods of effects."
+version = "1.0.0"
+license = { file = "LICENSE" }
+dependencies = []
+
+[project.urls]
+Repository = ""
+#  Used by Comfy Registry https://comfyregistry.org
+
+[tool.comfy]
+PublisherId = "TrophiHunter"
+DisplayName = "ComfyUI-TrophiHunter-Photography-Nodes"
+Icon = ""
