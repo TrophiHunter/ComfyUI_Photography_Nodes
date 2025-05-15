@@ -2568,6 +2568,26 @@ palette_filepath = path to any .ase, .aco or .act swatch file to use as the pale
     def func_pixel_art(self, image, scale: float = 0.25, num_colors: int = 8, saturation: float = 1.5, dither: str = "none", matrix_size: str = '4', palette: torch.Tensor = None, palette_mode: str = "adaptive", dither_strength: float = 1.0, matrix_expand_negative: bool = True, floyd_dither_serpentine: bool = False, floyd_dither_threshold_jitter: bool = False, palette_filepath: str = ""):
         matrix_size = int(matrix_size)
         matrix_threshold = dither_strength
+        if palette is not None:
+            if not isinstance(palette, torch.Tensor):
+                raise TypeError("Palette must be a torch.Tensor")
+            dims = palette.dim()
+            if dims == 2:
+                total_pixels = palette.shape[0] * palette.shape[1]
+            elif dims == 3:
+                if palette.shape[0] <= 4:
+                    total_pixels = palette.shape[1] * palette.shape[2]
+                else:
+                    total_pixels = palette.shape[0] * palette.shape[1]
+            elif dims == 4:
+                if palette.shape[1] <= 4:
+                    total_pixels = palette.shape[2] * palette.shape[3]
+                else:
+                    total_pixels = palette.shape[1] * palette.shape[2]
+            else:
+                raise ValueError("Unsupported palette shape with dimensions: {}".format(dims))
+            if total_pixels > 256:
+                raise ValueError(f"Palette image must be less than or equal to 256 pixels (got {total_pixels}).")
         def _cmyk_to_rgb(c, m, y, k):
             C = 1 - c
             M = 1 - m
