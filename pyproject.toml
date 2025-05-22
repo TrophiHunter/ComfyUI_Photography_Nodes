@@ -1,6 +1,6 @@
 [project]
-name = "ComfyUI_Photography_Nodes"
-description = "Photography nodes with laods of effects."
+name = "Photography Nodes"
+description = "Photography nodes with loads of effects."
 version = "1.0.1"
 license = "LICENSE"
 
