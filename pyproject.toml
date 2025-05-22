@@ -10,5 +10,5 @@ Repository = "https://github.com/TrophiHunter/ComfyUI_Photography_Nodes"
 
 [tool.comfy]
 PublisherId = "TrophiHunter"
-DisplayName = "ComfyUI-TrophiHunter-Photography-Nodes"
+DisplayName = "ComfyUI_Photography_Nodes"
 Icon = ""
