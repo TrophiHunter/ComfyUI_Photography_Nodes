@@ -42,7 +42,7 @@ A simple Contrast and Brightness adjustment node.
         adjusted_image = torch.clamp((image * contrast) + brightness, 0, 255).to(torch.float32)
         return (adjusted_image,)
 
-class Levels:
+class Levels_Adjustment:
     @classmethod
     def INPUT_TYPES(cls):
         inputs = {
@@ -519,7 +519,7 @@ opacity = like in photoshop opacity amount
             bloomed_image = torch.clamp(bloomed_image, 0.0, 1.0)
             return (bloomed_image,)
         
-class Vignette:
+class Vignette_Effect:
     @classmethod
     def INPUT_TYPES(cls):
         inputs = {
@@ -1564,7 +1564,7 @@ A node for adding an Halation effect on an image.
         output = torch.clamp(image + blurred * intensity, 0.0, 1.0)
         return (output,)
 
-class Sharpen:
+class Sharpen_Simple:
     @classmethod
     def INPUT_TYPES(cls):
         inputs = {

@@ -1,10 +1,10 @@
 from .nodes import Contrast_Brightness
-from .nodes import Levels
+from .nodes import Levels_Adjustment
 from .nodes import Saturation_Vibrance
 from .nodes import Tint
 from .nodes import Noise
 from .nodes import Bloom
-from .nodes import Vignette
+from .nodes import Vignette_Effect
 from .nodes import Chromatic_Aberration
 from .nodes import Lens_Distortion
 from .nodes import Depth_of_Field
@@ -13,7 +13,7 @@ from .nodes import Lens_Dirt
 from .nodes import Physically_Accurate_Lens_Dirt
 from .nodes import Bloom_Lens_Flares
 from .nodes import Halation
-from .nodes import Sharpen
+from .nodes import Sharpen_Simple
 from .nodes import Sharpen_Unsharp_Mask
 from .nodes import Manga_Toner
 from .nodes import Monitor_Filter
@@ -29,12 +29,12 @@ from .nodes import Lut
 
 NODE_CLASS_MAPPINGS = {
     "Contrast Brightness": Contrast_Brightness,
-    "Levels": Levels,
+    "Levels Adjustment": Levels_Adjustment,
     "Saturation Vibrance": Saturation_Vibrance,
     "Tint": Tint,
     "Noise": Noise,
     "Bloom": Bloom,
-    "Vignette": Vignette,
+    "Vignette Effect": Vignette_Effect,
     "Chromatic Aberration": Chromatic_Aberration,
     "Lens Distortion": Lens_Distortion,
     "Depth of Field": Depth_of_Field,
@@ -43,7 +43,7 @@ NODE_CLASS_MAPPINGS = {
     "Physically Accurate Lens Dirt": Physically_Accurate_Lens_Dirt,
     "Bloom Lens Flares": Bloom_Lens_Flares,
     "Halation": Halation,
-    "Sharpen": Sharpen,
+    "Sharpen Simple": Sharpen_Simple,
     "Sharpen Unsharp Mask": Sharpen_Unsharp_Mask,
     "Manga Toner": Manga_Toner,
     "Monitor Filter": Monitor_Filter,
@@ -60,12 +60,12 @@ NODE_CLASS_MAPPINGS = {
 
 NODE_DISPLAY_NAMES_MAPPINGS = {
     "Contrast Brightness": "Simple Contrast and Brightness adjustments",
-    "Levels": "Simple Levels adjustments",
+    "Levels Adjustment": "Simple Levels adjustments",
     "Saturation Vibrance": "Simple Saturation and Vibrance adjustments",
     "Tint": "Simple Tint adjustments",
     "Noise": "Simple Noise adjustments",
     "Bloom": "Simple Bloom effects",
-    "Vignette": "Simple Vignette effects",
+    "Vignette Effect": "Simple Vignette effects",
     "Chromatic Aberration": "Chromatic Aberration effects",
     "Lens Distortion": "Lens Distortion effects",
     "Depth of Field": "Depth of Field Effects",
@@ -74,7 +74,7 @@ NODE_DISPLAY_NAMES_MAPPINGS = {
     "Physically Accurate Lens Dirt": "Physically Accurate Lens Dirt Effects",
     "Bloom Lens Flares": "Bloom Lens Flares Effects",
     "Halation": "Halation Effects",
-    "Sharpen": "Sharpen effects",
+    "Sharpen Simple": "Sharpen effects",
     "Sharpen Unsharp Mask": "Sharpen Unsharp Mask Effects",
     "Manga Toner": "Manga Toner Effects",
     "Monitor Filter": "Monitor Filter Effect",
